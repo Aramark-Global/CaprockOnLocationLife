@@ -116,7 +116,7 @@ const features = t<string[]>("home:housing.features");
 				<ul class="cap-feature-list">
 					{features.map((feat) => <li>{feat}</li>)}
 				</ul>
-				<a href={getLocalizedRoute(locale, "/about")} class="cap-btn cap-btn--dark-ghost">
+				<a href={getLocalizedRoute(locale, "/about")} class="cap-btn cap-btn--ghost">
 					{t("home:housing.cta")}
 				</a>
 			</div>
