@@ -12,8 +12,8 @@ import Pagination from "@components/Pagination/Pagination.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts = await getCollection("blog");
-	const frPosts = filterCollectionByLanguage(allPosts, "fr");
-	const sortedPosts = frPosts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+	const esPosts = filterCollectionByLanguage(allPosts, "es");
+	const sortedPosts = esPosts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
 	return paginate(sortedPosts, {
 		pageSize: 3,

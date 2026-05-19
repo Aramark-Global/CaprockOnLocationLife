@@ -1,12 +1,12 @@
 ---
-title: Premier article de blog en français
+title: Primer artículo del blog en español
 description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
 author: Code Stitch
 date: 2023-06-08T15:26:46.705Z
 mappingKey: "post-1"
-permalink: premier-article-en-francais
+permalink: primer-articulo-en-espanol
 image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Cuisine
+imageAlt: Cocina
 ---
 
 ## Acuti Modo

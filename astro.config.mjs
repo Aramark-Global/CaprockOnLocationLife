@@ -6,7 +6,7 @@ export default defineConfig({
 	site: "https://www.yourwebsite.com", // update me!
 	i18n: {
 		defaultLocale: "en",
-		locales: ["en", "fr"],
+		locales: ["en", "es"],
 		routing: {
 			prefixDefaultLocale: false,
 		},
@@ -20,7 +20,7 @@ export default defineConfig({
 				defaultLocale: "en",
 				locales: {
 					en: "en-US",
-					fr: "fr-FR",
+					es: "es-ES",
 				},
 			},
 		}),

@@ -6,11 +6,11 @@
 	"project-2": "Project 2",
 	"blog": "Blog",
 	"contact": "Contact",
-	"theme-label": "Choisissez le thème",
-	"language-label": "Choisissez la langue",
+	"theme-label": "Select theme",
+	"language-label": "Select language",
 	"languageSelect": {
 		"en": "English",
-		"fr": "French",
+		"es": "Spanish",
 		"instructions": "Use arrow keys to navigate, press Enter to select"
 	},
 	"themeSelect": {

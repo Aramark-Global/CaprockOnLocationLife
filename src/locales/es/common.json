@@ -1,0 +1,59 @@
+{
+	"home": "Inicio",
+	"about": "Sobre Nosotros",
+	"projects": "Proyectos",
+	"project-1": "Proyecto 1",
+	"project-2": "Proyecto 2",
+	"blog": "Blog",
+	"contact": "Contacto",
+	"theme-label": "Seleccionar tema",
+	"language-label": "Seleccionar idioma",
+	"languageSelect": {
+		"en": "Inglés",
+		"es": "Español",
+		"instructions": "Use las flechas para navegar, presione Enter para seleccionar"
+	},
+	"themeSelect": {
+		"accessibleLabel": "Seleccionar tema",
+		"light": "Claro",
+		"dark": "Oscuro",
+		"auto": "Automático"
+	},
+	"quote": "Solicitar presupuesto gratis",
+	"estimate": "Obtener un presupuesto ahora",
+	"ctaComponent": {
+		"title": "Hagámoslo realidad",
+		"subtitle": "Con nosotros hoy",
+		"message": "Diga algo atractivo, informativo y que anime a hacer clic en el botón para ir a la página de contacto. Me gusta añadir esto al final de todas las páginas.",
+		"cta": "Obtenga un presupuesto ahora",
+		"alt": ""
+	},
+	"about-page": {
+		"landing": "Sobre Nosotros",
+		"topper": "Sobre Nosotros",
+		"title": "Título de la Empresa",
+		"p-1": "Nuestra empresa fue creada In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p-2": "Creemos que In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p-3": "Es importante In consequat tincidunt turpis sit amet imperdiet.",
+		"rank": "Director-Fundador",
+		"cta": "Nuestros proyectos"
+	},
+	"footer": {
+		"information": "Información",
+		"services": "Servicios",
+		"contact": "Contacto",
+		"click": "Haga clic para enviar un correo",
+		"p": "Contenido adicional si lo necesita, si no, puede eliminar toda esta etiqueta p. Yo suelo hacerlo.",
+		"credit": "Diseñado y programado a mano por "
+	},
+	"notFound": {
+		"pageNotFound": "404 - La página que está buscando no existe.",
+		"linkText": "Volver a la página de inicio"
+	},
+	"skipLink": "Haga clic para saltar al contenido principal",
+	"pagination": {
+		"previous": "Ant.",
+		"next": "Sig."
+	},
+	"reviews": "Reseñas"
+}

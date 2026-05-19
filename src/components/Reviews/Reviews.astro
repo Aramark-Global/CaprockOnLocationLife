@@ -9,9 +9,9 @@ const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
 import enReviews from "@locales/en/reviews.json";
-import frReviews from "@locales/fr/reviews.json";
+import esReviews from "@locales/es/reviews.json";
 
-const reviewsData = locale === "fr" ? frReviews : enReviews;
+const reviewsData = locale === "es" ? esReviews : enReviews;
 const testimonials = reviewsData.testimonials;
 
 ---

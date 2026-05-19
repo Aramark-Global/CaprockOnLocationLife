@@ -1,0 +1,102 @@
+SAMPLE COPY
+•	Think of this as a marketing website for prospective guests.  Real life example would be webpages for master planned communities or time shares - lots of excitement, renderings, maps, a few details, where to go to learn more etc.
+•	Once registered as a guest/resident all information will be promulgated from Akia which would have all the details.
+•	Its table of contents could be like the below where folks can click and learn more:
+o	Location Details
+o	“Getting Here"
+o	Life on Site:
+	Site Plan
+	Amenities
+o	How to Register/Learn More
+
+Content Blocks
+Location Details:
+-	Address: 14585 Highway 152 Mobeetie, TX 79061
+-	Location name: Caprock 
+External branding of location: Caprock 
+Getting Here:
+-	Nearby Cities
+o	Pampa, Texas (~25mins)
+o	Amarillo, Texas (~1.5 hours)
+o	Sweetwater, Oklahoma (45 mins)
+-	Nearby Airports
+o	Rick Husband Amarillo International Airport (1 hour and 15 mins)
+-	Address: 14585 Highway 152 Mobeetie, TX 79061
+-	Location name: Caprock
+Life on Site
+-	Amenities
+o	Single Occupancy Rooms
+o	Individual Bathrooms 
+o	RV Park
+o	Wellness Center
+o	Soccer Fields
+o	Pickleball 
+o	Basketball Court
+o	Weight Rooms
+o	Golf Simulator
+o	Pool Tables
+o	Covered Parking
+o	Shuttle Services 
+o	Variety of On-Site Dining
+o	General Store  
+o	Security and Guest Services
+o	Housekeeping
+-	Site plan: Project Tumbleweed Slick_Horizontal V7
+
+How to Register / Learn More
+-	TBD
+______________________________________
+Draft Content:
+Discover Life at Caprock, Your Elevated Workforce Community 
+Built for people that are powering progress, Caprock is designed to provide comfortable, connected, and convenient living experience while working on site. From modern single-occupancy accommodations to energizing recreation spaces and a variety of dining options, every aspect of the community is thoughtfully designed to support your daily life, wellbeing, and sense of connection.
+More than just workforce housing, Caprock is a welcoming, service-driven community designed to help residents recharge, connect, and feel supported throughout their stay.
+CTA: Learn More 
+_______________
+Getting Here
+We’re here to help make your arrival to Caprock as seamless as possible. Conveniently located near several regional cities and transportation hubs, Caprock offers accessible travel options for residents arriving from across the country or closer to home.
+Nearby Cities
+•	Pampa — Approximately 25 minutes away 
+•	Amarillo — Approximately 1.5 hours away 
+•	Sweetwater — Approximately 45 minutes away 
+Nearby Airport
+•	Rick Husband Amarillo International Airport — Approximately 1 hour and 15 minutes away
+CTA:
+_______________
+Housing & Accommodations
+Caprock offers modern, comfortable accommodations designed specifically for extended stays and workforce living. Thoughtfully designed spaces support both rest and productivity, creating an environment where residents can settle in, recharge, and feel at home throughout their assignment.
+Housing features include:
+•	Private Single Occupancy Accommodations
+•	Fully Furnished Rooms
+•	Wi-Fi Access
+•	Laundry Facilities
+•	Climate-controlled Living Spaces
+•	Housekeeping Services
+•	Shared Social Spaces
+Bringing Your RV?
+Prefer to bring your home on the road with you? Caprock also offers RV accommodations for residents looking for additional flexibility during their stay.
+The on-site RV park provides convenient access to dining, recreation, wellness, and resident services, allowing guests to enjoy the full Caprock experience while traveling with their RV.
+CTA: Inquire About Housing 
+Asked to add Site Plan – not sure how we want to tee it up – maybe, see how the community is coming to life?
+_______________
+Life on Site
+Life at Caprock is designed to support more than just the workday. From recreation and wellness amenities to dining and shared community spaces, Caprock creates an environment where residents can recharge, connect, and enjoy life on site.
+Whether you’re staying active after a shift, sharing a meal with coworkers, or relaxing in community gathering spaces, every experience is designed around comfort, convenience, and connection.
+Recreation & Wellness (SUB Under Life on Site)
+After the workday, residents can stay active, challenge coworkers to a basketball game, or simply take time to reset and recharge. Caprock offers a variety of recreation and wellness amenities designed to support both physical wellbeing and everyday enjoyment.
+Amenities include:
+•	Wellness Center
+•	Weight Rooms
+•	Soccer Fields
+•	Pickleball Courts
+•	Basketball Court
+•	Golf Simulator
+•	Pool Tables
+Dining
+Dining at Caprock is designed to be approachable, convenient, and consistently high quality — supporting residents throughout every part of their day. Whether grabbing breakfast before an early shift, sitting down for dinner with coworkers, or picking up a quick bite between schedules, residents have access to a variety of on-site dining experiences.
+Dining Offerings Include:
+•	Variety of on-site dining options
+•	Grab-and-go selections
+•	Food trucks 
+•	Freshly prepared meals daily 
+•	Comfortable communal dining spaces
+

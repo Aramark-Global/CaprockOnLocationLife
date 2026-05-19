@@ -8,15 +8,15 @@ export const routeTranslations: Record<Locale, Record<string, string>> = {
     "project-2": "project-2",
     "reviews": "reviews",
   },
-  fr: {
-    "about": "a-propos",
-    "projects": "projets",
-    "project-1": "projet-1",
-    "project-2": "projet-2",
-    "reviews": "avis",
+  es: {
+    "about": "sobre-nosotros",
+    "projects": "proyectos",
+    "project-1": "proyecto-1",
+    "project-2": "proyecto-2",
+    "reviews": "resenas",
   },
 };
 
 export const localizedCollections = {
-  blog: { en: "blog", fr: "blog" },
+  blog: { en: "blog", es: "blog" },
 } as const;

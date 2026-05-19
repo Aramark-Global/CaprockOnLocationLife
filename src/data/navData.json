@@ -4,7 +4,7 @@
 		"url": "/",
 		"label": {
 			"en": "Home",
-			"fr": "Accueil"
+			"es": "Inicio"
 		},
 		"children": []
 	},
@@ -13,7 +13,7 @@
 		"url": "/about",
 		"label": {
 			"en": "About",
-			"fr": "À propos"
+			"es": "Sobre Nosotros"
 		},
 		"children": []
 	},
@@ -21,7 +21,7 @@
 		"key": "projects",
 		"label": {
 			"en": "Projects",
-			"fr": "Portfolio"
+			"es": "Proyectos"
 		},
 		"children": [
 			{
@@ -29,7 +29,7 @@
 				"url": "/projects/project-1/",
 				"label": {
 					"en": "Project 1",
-					"fr": "Projet 1"
+					"es": "Proyecto 1"
 				}
 			},
 			{
@@ -37,7 +37,7 @@
 				"url": "/projects/project-2/",
 				"label": {
 					"en": "Project 2",
-					"fr": "Projet 2"
+					"es": "Proyecto 2"
 				}
 			}
 		]
@@ -47,7 +47,7 @@
 		"url": "/blog",
 		"label": {
 			"en": "Blog",
-			"fr": "Blog"
+			"es": "Blog"
 		},
 		"children": []
 	},
@@ -56,7 +56,7 @@
 		"url": "/reviews",
 		"label": {
 			"en": "Reviews",
-			"fr": "Avis"
+			"es": "Reseñas"
 		},
 		"children": []
 	},
@@ -65,7 +65,7 @@
 		"url": "/contact",
 		"label": {
 			"en": "Contact",
-			"fr": "Contact"
+			"es": "Contacto"
 		},
 		"children": []
 	}

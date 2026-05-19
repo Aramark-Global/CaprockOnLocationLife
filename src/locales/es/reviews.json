@@ -1,0 +1,38 @@
+{
+	"landing": "Reseñas",
+	"topper": "Nuestras Reseñas",
+	"title": "Palabras de Nuestros Clientes",
+	"p": "Lea lo que nuestros clientes satisfechos tienen que decir sobre nuestros servicios. Nos enorgullece ofrecer un trabajo de calidad y un servicio al cliente excepcional.",
+	"testimonials": [
+		{
+			"quote": "Me sorprendió la calidad del trabajo realizado. El equipo fue profesional, puntual y superó mis expectativas. Recomiendo encarecidamente sus servicios a cualquiera que busque calidad de primera.",
+			"name": "Juan Pérez",
+			"role": "Propietario"
+		},
+		{
+			"quote": "Servicio excepcional de principio a fin. Se comunicaron con claridad durante todo el proceso y entregaron exactamente lo prometido. Sin duda los volveré a contratar.",
+			"name": "María García",
+			"role": "Empresaria"
+		},
+		{
+			"quote": "El nivel de artesanía y la atención al detalle fueron impresionantes. Trataron mi casa como si fuera la suya. No podría estar más feliz con los resultados.",
+			"name": "Miguel Hernández",
+			"role": "Administrador de Propiedades"
+		},
+		{
+			"quote": "Equipo increíblemente profesional. Llegaron a tiempo, trabajaron de forma eficiente y dejaron todo limpio. El resultado final superó lo que imaginaba.",
+			"name": "Lucía Rodríguez",
+			"role": "Propietaria"
+		},
+		{
+			"quote": "He contratado a muchos contratistas a lo largo de los años, pero este equipo destaca. Su experiencia y compromiso con la calidad no tienen rival. ¡Muy recomendado!",
+			"name": "Roberto Fernández",
+			"role": "Inversor Inmobiliario"
+		},
+		{
+			"quote": "Desde la consulta inicial hasta la finalización del proyecto, la experiencia fue impecable. Escucharon mis necesidades y entregaron un resultado perfecto.",
+			"name": "Isabel Morales",
+			"role": "Diseñadora de Interiores"
+		}
+	]
+}

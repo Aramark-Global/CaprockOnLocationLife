@@ -1,0 +1,71 @@
+{
+	"layout": {
+		"title": "Sitios Web al Pixel Perfecto",
+		"description": "Meta descripción de la página"
+	},
+	"hero": {
+		"topper": "Kit Avanzado",
+		"title": {
+			"1": "Astro Avanzado v6",
+			"2": "i18n"
+		},
+		"p1": "Este kit está especialmente diseñado para clientes que desean un sitio multi-idioma y, por lo tanto, está configurado con las herramientas de internacionalización de Astro (i18n) para dos idiomas: inglés y español. También incluye una integración con Decap CMS.",
+		"cta1": "GitHub",
+		"cta2": "CodeStitch"
+	},
+	"services": [
+		{
+			"heading": "Servicio 1",
+			"p": "Hable del servicio con palabras clave por las que las personas lo buscarán. Mantenga el texto en 1-2 frases."
+		},
+		{
+			"heading": "Servicio 2",
+			"p": "Hable del servicio con palabras clave por las que las personas lo buscarán. Mantenga el texto en 1-2 frases."
+		},
+		{
+			"heading": "Servicio 3",
+			"p": "Hable del servicio con palabras clave por las que las personas lo buscarán. Mantenga el texto en 1-2 frases."
+		}
+	],
+	"about": {
+		"topper": "Sobre Nosotros",
+		"title": "Título de la Empresa",
+		"p1": "Nuestra empresa fue creada In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p2": "Creemos que In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p3": "Es importante In consequat tincidunt turpis sit amet imperdiet.",
+		"rank": "Director-Fundador",
+		"cta": "Más sobre nosotros"
+	},
+	"extra": {
+		"topper": "Posicionamiento SEO",
+		"title": "Hable sobre una palabra clave principal del servicio",
+		"p1": "Nuestro servicio principal In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p2": "La investigación muestra que In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per."
+	},
+	"portfolio": {
+		"topper": "Nuestro Portafolio",
+		"title": "Et orci volutpat, instalaciones de generadores de respaldo",
+		"cta": "Ver Nuestros Productos"
+	},
+	"testimonials": {
+		"topper": "Testimonios",
+		"title": "Palabras de Nuestros Clientes",
+		"items": [
+			{
+				"quote": "Me sorprendió la calidad del trabajo. El equipo fue profesional y superó mis expectativas. ¡Altamente recomendado!",
+				"name": "Juan Pérez",
+				"role": "Propietario"
+			},
+			{
+				"quote": "Servicio excepcional de principio a fin. Se comunicaron con claridad y entregaron exactamente lo prometido.",
+				"name": "María García",
+				"role": "Empresaria"
+			},
+			{
+				"quote": "El nivel de artesanía fue impresionante. Trataron mi casa como si fuera la suya.",
+				"name": "Miguel Hernández",
+				"role": "Administrador de Propiedades"
+			}
+		]
+	}
+}
