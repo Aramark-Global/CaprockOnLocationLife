@@ -1,10 +1,10 @@
 ---
-title: Cuarto artículo del blog en español
-description: Lorem markdownum Talia. Carinae equis.
-author: Code Stitch
+title: Opciones de Alojamiento en Caprock
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+author: Caprock
 date: 2023-06-08T15:27:34.591Z
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Cocina
+image: "@assets/images/sample-images/715b563bfa120add9762c7a218e9b955.jpg"
+imageAlt: Alojamiento en Caprock
 mappingKey: "post-4"
 permalink: cuarto-articulo-en-espanol
 ---

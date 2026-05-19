@@ -1,0 +1,31 @@
+{
+	"layout": {
+		"title": "Sobre Caprock",
+		"description": "Caprock es una comunidad laboral de alto nivel en Mobeetie, Texas, diseñada para la comodidad, la conexión y la vida en el lugar."
+	},
+	"hero": {
+		"eyebrow": "Sobre Nosotros",
+		"title": "Una comunidad laboral de alto nivel.",
+		"subtitle": "Comodidad. Conexión. Vida en el lugar."
+	},
+	"story": {
+		"eyebrow": "Nuestra Historia",
+		"title": "Creado para quienes impulsan el progreso.",
+		"p1": "Caprock se creó para las personas que hacen el trabajo — las cuadrillas, los operadores y los profesionales cuyo esfuerzo impulsa los proyectos en el panhandle de Texas. Comenzamos con una idea simple: el alojamiento laboral debería sentirse menos como un hospedaje temporal y más como una comunidad real.",
+		"p2": "Desde alojamiento privado hasta bienestar, recreación y comedor, cada detalle está diseñado para apoyar el ritmo de una asignación larga — un lugar para descansar, recargar y reiniciar antes de comenzar de nuevo mañana."
+	},
+	"values": {
+		"eyebrow": "Lo Que Nos Distingue",
+		"title": "Servicio, por diseño.",
+		"items": [
+			{ "title": "Comodidad", "desc": "Habitaciones privadas, mobiliario moderno y espacios tranquilos diseñados para un descanso real." },
+			{ "title": "Conexión", "desc": "Espacios sociales compartidos, recreación y comedor que reúnen a los residentes." },
+			{ "title": "Conveniencia", "desc": "Comedor en el lugar, transporte y atención al huésped 24/7 — para que se concentre en el trabajo." },
+			{ "title": "Bienestar", "desc": "Centro de bienestar, instalaciones de recreación y comodidades que apoyan su forma de vivir." }
+		]
+	},
+	"cta": {
+		"title": "Vea cómo es la vida en Caprock.",
+		"button": "Explorar la Vida en el Lugar"
+	}
+}

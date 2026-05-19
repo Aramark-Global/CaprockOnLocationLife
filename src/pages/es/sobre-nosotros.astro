@@ -1,262 +1,202 @@
 ---
-import { Icon } from "astro-icon/components";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import CTA from "@components/CTA/CTA.astro";
-import Banner from "@components/Banner/Banner.astro";
 import { Picture } from "astro:assets";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations } from "@js/translationUtils";
-import cabinets2 from "@assets/images/CTA/cabinets2.jpg";
-import construction from "@assets/images/construction.jpg";
 
-import landingImage from "@assets/images/landing.jpg";
+import bannerImg from "@assets/images/sample-images/coyote-bluff-amarillo-1024x768.jpg";
+import storyImg from "@assets/images/sample-images/87236e4b68901abdad43804dbad863e8.jpg";
+import CTA from "@components/CTA/CTA.astro";
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
+
+const values = t<Array<{ title: string; desc: string }>>("about:values.items");
 ---
 
-<BaseLayout title={t("about-page.landing")} description="Meta description for the page">
-  <!-- ============================================ -->
-  <!--                    LANDING                   -->
-  <!-- ============================================ -->
+<BaseLayout
+	title={t("about:layout.title")}
+	description={t("about:layout.description")}
+>
+	<!-- ===================== BANNER ===================== -->
+	<section class="cap-about-banner">
+		<Picture
+			src={bannerImg}
+			alt=""
+			formats={["avif", "webp"]}
+			widths={[640, 1024, 1600, 2000]}
+			sizes="100vw"
+			pictureAttributes={{ class: "cap-about-bg" }}
+			aria-hidden="true"
+			loading="eager"
+		/>
+		<div class="cap-about-scrim" aria-hidden="true"></div>
+		<div class="cap-about-banner-content cap-container">
+			<span class="cap-eyebrow cap-banner-eyebrow">{t("about:hero.eyebrow")}</span>
+			<h1 class="cap-hero-title cap-about-title">{t("about:hero.title")}</h1>
+			<p class="cap-sub cap-about-sub">{t("about:hero.subtitle")}</p>
+		</div>
+	</section>
 
-  <Banner title={t("about-page.landing")} image={landingImage} />
+	<!-- ===================== STORY ===================== -->
+	<section class="cap-section cap-section--light">
+		<div class="cap-container cap-about-story">
+			<div class="cap-about-story-media">
+				<Picture
+					src={storyImg}
+					alt="Caprock community"
+					formats={["avif", "webp"]}
+					widths={[480, 800, 1200]}
+					sizes="(min-width: 64rem) 45vw, 100vw"
+					loading="lazy"
+				/>
+			</div>
+			<div class="cap-about-story-body">
+				<span class="cap-eyebrow">{t("about:story.eyebrow")}</span>
+				<span class="cap-rule"></span>
+				<h2 class="cap-h2">{t("about:story.title")}</h2>
+				<p class="cap-lead">{t("about:story.p1")}</p>
+				<p>{t("about:story.p2")}</p>
+			</div>
+		</div>
+	</section>
 
-  <!-- ============================================ -->
-  <!--                 Side By Side                 -->
-  <!-- ============================================ -->
+	<!-- ===================== VALUES ===================== -->
+	<section class="cap-section cap-section--dark">
+		<div class="cap-container">
+			<header class="cap-section-head">
+				<span class="cap-eyebrow">{t("about:values.eyebrow")}</span>
+				<span class="cap-rule"></span>
+				<h2 class="cap-h2">{t("about:values.title")}</h2>
+			</header>
 
-  <section id="sbs">
-    <div class="cs-container">
-      <!-- Left Image Section -->
-      <div class="cs-left">
-        <Picture src={cabinets2} alt="cabinets" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" priority />
-        <Picture src={construction} alt="house" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" priority />
-      </div>
-      <!-- Right Content Section-->
-      <div class="cs-right">
-        <span class="cs-topper">{t("about-page.topper")}</span>
-        <h2 class="cs-title">{t("about-page.title")}</h2>
-        <p class="cs-text">
-          {t("about-page.p-1")}
-        </p>
-        <p class="cs-text">
-          {t("about-page.p-2")}
-        </p>
-        <div class="cs-flex-group">
-          <p class="cs-flex-p">
-            {t("about-page.p-3")}
-          </p>
-          <span class="cs-name">Justin Time</span>
-          <span class="cs-job">{t("about-page.rank")}</span>
-          <Icon name="quote-white" class="cs-quote-icon" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <CTA />
+			<ul class="cap-values-grid">
+				{
+					values.map((v, i) => (
+						<li class="cap-value">
+							<span class="cap-value-num">{String(i + 1).padStart(2, "0")}</span>
+							<h3 class="cap-h3">{v.title}</h3>
+							<p>{v.desc}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ===================== CTA ===================== -->
+	<CTA />
 </BaseLayout>
 
 <style lang="less">
-  /* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+	.cap-about-banner {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		color: var(--white);
+		overflow: hidden;
+	}
+	:global(.cap-about-bg) {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.cap-about-scrim {
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.65);
+		z-index: 1;
+	}
+	.cap-about-banner-content {
+		position: relative;
+		z-index: 2;
+		padding-block: clamp(4rem, 10vw, 7rem);
+		max-width: 50rem;
+	}
+	.cap-banner-eyebrow {
+		color: var(--gold);
+		margin-bottom: 1.25rem;
+	}
+	:global(.cap-about-title) {
+		color: var(--white);
+		max-width: 20ch;
+		margin-bottom: 1.25rem;
+		font-size: clamp(2.25rem, 6vw, 5rem);
+	}
+	.cap-about-sub {
+		color: var(--lightGray);
+		max-width: 36ch;
+	}
 
-  /*-- -------------------------- -->
-<---       Side By Side         -->
-<--- -------------------------- -*/
+	/* STORY */
+	.cap-about-story {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+		align-items: center;
+	}
+	.cap-about-story-media :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 4 / 5;
+		display: block;
+	}
+	.cap-about-story-body p {
+		margin-top: 1.25rem;
+	}
+	@media (min-width: 64rem) {
+		.cap-about-story {
+			grid-template-columns: 1fr 1.2fr;
+			gap: 5rem;
+		}
+	}
 
-  /* Mobile - 360px */
-  @media only screen and (min-width: 0em) {
-    #sbs {
-      padding: var(--sectionPadding);
+	/* VALUES */
+	.cap-values-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1px;
+		background-color: rgba(255, 255, 255, 0.08);
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		padding: 0;
+		list-style: none;
+	}
+	.cap-value {
+		background-color: var(--black);
+		padding: 2.25rem 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
 
-      .cs-container {
-        width: 100%;
-        max-width: (1280/16rem);
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: (40/16rem);
-      }
+		p {
+			color: var(--lightGray);
+			font-size: 0.9375rem;
+		}
+	}
+	.cap-value-num {
+		font-family: var(--font-empera);
+		font-size: 0.875rem;
+		letter-spacing: 0.2em;
+		color: var(--gold);
+	}
+	@media (min-width: 40rem) {
+		.cap-values-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (min-width: 64rem) {
+		.cap-values-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
 
-      .cs-left {
-        /* scaling the font size with the view width */
-        font-size: ~"min(2.31vw, .7em)";
-        /* using ems so we can use font size to scale the whole section */
-        width: (631/16em);
-        height: (636/16em);
-        position: relative;
-      }
 
-      .cs-picture {
-        border-radius: (24/16em);
-        display: block;
-        position: absolute;
-        /* clips img tag corners */
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          /* makes image act like a background image */
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
-
-      .cs-picture1 {
-        width: (522/16em);
-        height: (581/16em);
-        top: 0;
-        left: 0;
-      }
-
-      .cs-picture2 {
-        width: (414/16em);
-        height: (400/16em);
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        right: 0;
-        bottom: 0;
-      }
-
-      .cs-right {
-        max-width: (542/16rem);
-        margin: auto;
-      }
-
-      .cs-topper {
-        text-align: left;
-        margin-bottom: (4/16rem);
-      }
-
-      .cs-title {
-        text-align: left;
-        max-width: (800/16rem);
-      }
-
-      .cs-text {
-        text-align: left;
-        max-width: (750/16rem);
-        margin-bottom: (16/16rem);
-        color: var(--bodyTextColor);
-
-        &:last-of-type {
-          margin-bottom: (32/16rem);
-        }
-      }
-
-      .cs-flex-group {
-        /* 16px - 32px */
-        padding: clamp(1rem, 3vw, 2rem);
-        background-color: #f7f7f7;
-        border-radius: (16/16rem);
-        position: relative;
-      }
-
-      .cs-flex-p {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        margin: 0 0 (16/16rem);
-        color: #353535;
-      }
-
-      .cs-name {
-        font-size: (16/16rem);
-        font-weight: bold;
-        line-height: 1.2em;
-        text-transform: uppercase;
-        margin: 0 0 (4/16rem);
-        color: var(--headerColor);
-        display: block;
-      }
-
-      .cs-job {
-        font-size: (14/16rem);
-        line-height: 1.5em;
-        color: #353535;
-        display: block;
-      }
-
-      .cs-quote-icon {
-        /* 60px - 136px */
-        width: clamp(3.75rem, 10vw, 8.5rem);
-        height: auto;
-        position: absolute;
-        /* 16px - 32px */
-        right: clamp(1rem, 4vw, 2rem);
-        bottom: (0/16rem);
-      }
-
-      .cs-button-solid {
-        margin-top: (32/16rem);
-      }
-    }
-  }
-
-  /* Desktop - 1024px */
-  @media only screen and (min-width: 64em) {
-    #sbs {
-      .cs-container {
-        flex-flow: row;
-        justify-content: space-between;
-        gap: (52/16rem);
-      }
-
-      .cs-left {
-        font-size: ~"min(1.2vw, 1em)";
-        flex: none;
-      }
-
-      .cs-right {
-        margin: 0;
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #sbs {
-        .cs-left {
-          &:before,
-          &:after {
-            background: var(--accent);
-          }
-        }
-
-        .cs-picture2 {
-          background-color: var(--dark);
-          /* 6px - 12px */
-          border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-        }
-
-        .cs-title,
-        .cs-text,
-        .cs-h3,
-        .cs-flex-p,
-        .cs-name {
-          color: var(--bodyTextColorWhite);
-        }
-
-        .cs-flex-group {
-          background-color: var(--accent);
-        }
-
-        .cs-job {
-          color: var(--bodyTextColorWhite);
-          opacity: 0.8;
-        }
-
-        .cs-quote-icon {
-          opacity: 0.2;
-        }
-      }
-    }
-  }
 </style>

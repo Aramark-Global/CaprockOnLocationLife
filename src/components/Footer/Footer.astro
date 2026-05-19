@@ -5,342 +5,171 @@ import navData from "@data/navData.json";
 import { getCurrentYear } from "@js/utils";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations, getLocalizedRoute } from "@js/translationUtils";
-import logoWhite from "@assets/svgs/logo-white.svg";
+import logoWhite from "@assets/logos/Caprock-Secondary-4C.png";
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 const currentYear = getCurrentYear();
 ---
 
-<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
-<footer id="footer">
-  <div class="container">
-    <section class="left-section">
-      <a class="logo" href={getLocalizedRoute(locale,"/")}
-        ><Image src={logoWhite} alt="logo" width={264} height={78} loading="lazy" decoding="async" />
-      </a>
-      <p>
-        {t("footer.p")}
-      </p>
-    </section>
-    <section class="right-section">
-      <div class="lists">
-        <ul>
-          <li>
-            <h2>{t("footer.information")}</h2>
-          </li>
-          <!-- Note: `:any` is solely used to stop the TypeScript warnings. It's an upstream issue with the i18n package which does not impact the code. -->
-          {
-            navData.map((entry: any) => (
-              <li>
-                {entry.url && (<a href={getLocalizedRoute(locale,entry.url)}>{entry.label[locale]}</a>)}
-              </li>
-            ))
-          }
-        </ul>
-        <ul>
-          <li>
-            <h2>{t("footer.services")}</h2>
-          </li>
-          <li>Service1</li>
-          <li>Service2</li>
-          <li>Service4</li>
-          <li>Service5</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>{t("footer.contact")}</h2>
-          </li>
-          <li>
-            <a href={getLocalizedRoute(locale,"/contact")}>
-              {BUSINESS.address.lineOne}<br />
-              {BUSINESS.address.lineTwo}<br />
-              {BUSINESS.address.city}
-              {BUSINESS.address.state}
-              {BUSINESS.address.zip}
-            </a>
-          </li>
-          <li>
-            <a href={`tel:${BUSINESS.phoneForTel}`}>
-              T:
-              {BUSINESS.phoneFormatted}
-            </a>
-          </li>
-          <li>
-            <a href={`mailto:${BUSINESS.email}`}>{t("footer.click")}</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
+<footer id="cap-footer">
+	<div class="cap-footer-inner">
+		<div class="cap-footer-brand">
+			<a class="cap-footer-logo" href={getLocalizedRoute(locale, "/")} aria-label="Caprock — home">
+				<Image src={logoWhite} alt="Caprock" width={480} height={120} loading="lazy" decoding="async" />
+			</a>
+			<p class="cap-footer-tagline">{t("footer.tagline")}</p>
+		</div>
 
-  <section class="credit">
-    <span>{t("footer.credit")}</span>
-    <a href={getLocalizedRoute(locale,"/")} target="_blank" rel="noopener">Your Company Name</a>
-    <span class="copyright"> Copyright {currentYear}</span>
-  </section>
+		<div class="cap-footer-cols">
+			<section class="cap-footer-col">
+				<h2 class="cap-footer-heading">{t("footer.explore")}</h2>
+				<ul>
+					{
+						navData.map((entry: any) => (
+							<li>
+								<a href={getLocalizedRoute(locale, entry.url)}>{entry.label[locale]}</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+
+			<section class="cap-footer-col">
+				<h2 class="cap-footer-heading">{t("footer.visit")}</h2>
+				<ul>
+					<li>
+						<a href={BUSINESS.address.mapLink} target="_blank" rel="noopener">
+							{BUSINESS.address.lineOne}<br />
+							{BUSINESS.address.city} {BUSINESS.address.state} {BUSINESS.address.zip}
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<section class="cap-footer-col">
+				<h2 class="cap-footer-heading">{t("footer.connect")}</h2>
+				<ul>
+					<li>
+						<a href={`tel:${BUSINESS.phoneForTel}`}>{BUSINESS.phoneFormatted}</a>
+					</li>
+					<li>
+						<a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<div class="cap-footer-base">
+		<span>© {currentYear} {BUSINESS.name}. {t("footer.rights")}</span>
+	</div>
 </footer>
 
 <style lang="less">
-  /* Mobile */
-  @media only screen and (min-width: 0em) {
-    #footer {
-      font-size: ~"min(4vw, 1.2em)";
-      padding: (84/16rem) 0 (20/16rem);
-      background: var(--dark);
+	#cap-footer {
+		background-color: var(--black);
+		color: var(--white);
+		padding: clamp(3.5rem, 8vw, 6rem) 0 0;
+		font-family: var(--font-gotham);
+	}
 
-      .left-section {
-        text-align: center;
-        margin: auto;
-        margin-bottom: (50/16rem);
-        .logo {
-          text-align: center;
-          width: auto;
-          height: (32/16em);
-          margin: auto;
-          margin-bottom: (30/16em);
-          display: inline-block;
+	.cap-footer-inner {
+		max-width: var(--maxWidth);
+		margin-inline: auto;
+		padding-inline: var(--gutter);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		padding-bottom: 3rem;
+	}
 
-          img {
-            width: auto;
-            height: 100%;
-            display: block;
-          }
-        }
+	.cap-footer-brand {
+		max-width: 22rem;
+	}
 
-        p {
-          font-size: (14/16rem);
-          line-height: 27/14;
-          text-align: center;
-          width: 100%;
-          width: 307/14rem;
-          margin: auto;
-          color: #fff;
-          opacity: 0.9;
-        }
-      }
+	.cap-footer-logo {
+		line-height: 0;
+		display: inline-block;
+	}
 
-      .right-section {
-        width: 96%;
-        max-width: (407/16rem);
-        margin: auto;
-        .lists {
-          width: 96%;
-          max-width: (307/16rem);
-          margin: auto;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          ul {
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 0;
+	.cap-footer-logo img {
+		display: block;
+		height: 2.75rem;
+		width: auto;
+		max-width: 15rem;
+		object-fit: contain;
+		margin-bottom: 1.5rem;
+	}
 
-            &:nth-of-type(3) {
-              margin-top: (50/16rem);
-              li {
-                margin-bottom: (16/16rem);
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
+	.cap-footer-tagline {
+		font-family: var(--font-gelica);
+		font-style: italic;
+		font-size: 1.0625rem;
+		color: var(--lightGray);
+		line-height: 1.5;
+	}
 
-                &:last-of-type {
-                  margin-bottom: 0;
-                }
-              }
-            }
+	.cap-footer-cols {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		gap: 2.5rem;
+	}
 
-            li {
-              font-size: (18/16rem);
-              list-style: none;
-              margin-bottom: (12/16rem);
-              color: #fff;
-              opacity: 0.9;
+	.cap-footer-col {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.625rem;
+		}
 
-              a {
-                line-height: 21/18em;
-                text-decoration: none;
-                color: #fff;
-                transition: color 0.3s;
-                &:hover {
-                  color: var(--primary);
-                }
-              }
-            }
-            h2 {
-              font-size: (18/16rem);
-              font-weight: bold;
-              line-height: 21/18em;
-              text-transform: uppercase;
-              margin-bottom: (37/16rem);
-              color: #fff;
-              position: relative;
+		a {
+			color: var(--lightGray);
+			font-size: 0.9375rem;
+			line-height: 1.5;
+			transition: color 0.2s ease;
 
-              &:before {
-                content: "";
-                width: (97/16rem);
-                height: (2/16rem);
-                background: var(--primary);
-                opacity: 1;
-                display: block;
-                position: absolute;
-                bottom: (-16/16rem);
-                left: 0;
-              }
-            }
-          }
-        }
+			&:hover,
+			&:focus-visible {
+				color: var(--gold);
+			}
+		}
+	}
 
-        .buttons {
-          display: flex;
-          justify-content: center;
-        }
+	.cap-footer-heading {
+		font-family: var(--font-gotham);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		color: var(--gold);
+		margin: 0 0 1.25rem;
+		padding-bottom: 0.625rem;
+		border-bottom: 1px solid rgba(207, 183, 153, 0.25);
+	}
 
-        .cs-button-solid {
-          width: (250/16rem);
-          height: (53/16rem);
-          margin: 0;
-          padding-top: (3/16rem);
-        }
-      }
+	.cap-footer-base {
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		padding: 1.5rem var(--gutter);
+		max-width: var(--maxWidth);
+		margin-inline: auto;
+		font-size: 0.8125rem;
+		letter-spacing: 0.05em;
+		color: var(--lightGray);
+		text-align: center;
+	}
 
-      .credit {
-        font-size: (16/16rem);
-        line-height: (36/16rem);
-        text-align: center;
-        width: 96%;
-        margin: auto;
-        margin-top: (100/16rem);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2em;
-
-        a {
-          font-size: (16/16rem);
-          text-decoration: none;
-          color: var(--primaryDark);
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        .copyright {
-          font-size: (16/16rem);
-          display: block;
-        }
-
-        .settings {
-          display: flex;
-        }
-      }
-    }
-  }
-
-  /* Small Desktop */
-  @media only screen and (min-width: 64em) {
-    #footer {
-      font-size: ~"min(1.2vw, 1em)";
-      .container {
-        width: 96%;
-        max-width: (1320/16rem);
-        margin: auto;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-      }
-
-      .left-section {
-        text-align: left;
-        width: (409/16rem);
-        margin: 0;
-
-        .logo {
-          text-align: left;
-          height: (40/16rem);
-          margin-left: 0;
-        }
-
-        p {
-          text-align: left;
-          margin-left: 0;
-        }
-      }
-
-      .right-section {
-        width: (609/16rem);
-        max-width: none;
-        margin: 0;
-        .lists {
-          width: 96%;
-          max-width: (769/16rem);
-          max-width: initial;
-          margin: 0;
-
-          ul {
-            &:nth-of-type(3) {
-              margin-top: 0;
-
-              li:first-of-type {
-                margin-bottom: 0;
-              }
-            }
-
-            li {
-              a {
-                position: relative;
-
-                &:before {
-                  content: "";
-                  width: 0%;
-                  height: (2/16rem);
-                  background: var(--primary);
-                  opacity: 1;
-                  display: block;
-                  position: absolute;
-                  bottom: (-3/16rem);
-                  left: 0;
-                  transition: width 0.3s;
-                }
-
-                &:hover {
-                  &:before {
-                    width: 100%;
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .buttons {
-          justify-content: flex-start;
-        }
-      }
-
-      .credit {
-        flex-direction: row;
-        justify-content: center;
-
-        .copyright {
-          display: inline-block;
-        }
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #footer {
-        .credit a {
-          color: var(--primaryDark);
-        }
-      }
-    }
-  }
+	@media only screen and (min-width: 48rem) {
+		.cap-footer-inner {
+			grid-template-columns: 1fr 1.5fr;
+			align-items: start;
+			gap: 4rem;
+		}
+		.cap-footer-base {
+			text-align: left;
+		}
+	}
 </style>

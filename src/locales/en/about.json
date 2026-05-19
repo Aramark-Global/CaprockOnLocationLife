@@ -1,0 +1,31 @@
+{
+	"layout": {
+		"title": "About Caprock",
+		"description": "Caprock is an elevated workforce community in Mobeetie, Texas — designed for comfort, connection, and life on site."
+	},
+	"hero": {
+		"eyebrow": "About",
+		"title": "An elevated community.",
+		"subtitle": "Comfort. Connection. Life on site."
+	},
+	"story": {
+		"eyebrow": "Our Story",
+		"title": "Built for people powering progress.",
+		"p1": "Caprock was created for the people doing the work — the crews, operators, and professionals whose efforts move projects forward across the Texas panhandle. We started with a simple idea: workforce living should feel less like temporary lodging and more like a real community.",
+		"p2": "From private accommodations to wellness, recreation, and dining, every detail is built to support the rhythm of a long assignment — a place to rest, refuel, and reset before doing it all again tomorrow."
+	},
+	"values": {
+		"eyebrow": "What Sets Us Apart",
+		"title": "Service-driven, by design.",
+		"items": [
+			{ "title": "Comfort", "desc": "Private rooms, modern furnishings, and quiet spaces designed for a real night's rest." },
+			{ "title": "Connection", "desc": "Shared social spaces, recreation, and dining that bring residents together." },
+			{ "title": "Convenience", "desc": "On-site dining, shuttle services, and 24/7 guest support — so you can focus on the work." },
+			{ "title": "Wellbeing", "desc": "Wellness center, recreation facilities, and amenities that support how you live." }
+		]
+	},
+	"cta": {
+		"title": "See what life at Caprock looks like.",
+		"button": "Explore Life on Site"
+	}
+}

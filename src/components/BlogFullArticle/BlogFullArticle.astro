@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 
-import { Image, Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import profileSvg from "@assets/svgs/profile.svg";
 import { formatDate } from "@js/utils";
 import "@styles/markdown.less";
@@ -27,7 +27,7 @@ const { Content } = await render(post);
         <h2 class="blog-h1">{title}</h2>
         <div class="blog-authorGroup">
             <!--Author Image-->
-            <Picture src={profileSvg} alt="author" width={32} formats={["avif", "webp"]} pictureAttributes={{ class: "blog-author-img" }} decoding="async" />
+            <img src={profileSvg.src} alt="author" width="32" height="32" class="blog-author-img" decoding="async" />
             <span class="blog-author">{author}</span>
             <span aria-hidden="true" class="blog-dot"></span>
             <!--Blog Date-->

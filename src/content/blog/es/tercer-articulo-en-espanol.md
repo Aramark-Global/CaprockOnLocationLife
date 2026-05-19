@@ -1,10 +1,10 @@
 ---
-title: Tercer artículo del blog en español
-description: Lorem markdownum Talia. Carinae equis.
-author: Code Stitch
+title: Comodidades que Marcan la Diferencia
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+author: Caprock
 date: 2023-06-08T15:27:34.591Z
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Cocina
+image: "@assets/images/sample-images/CorkScrew-BBQ-Texas.jpg"
+imageAlt: Comodidades y comedor Caprock
 mappingKey: "post-3"
 permalink: tercer-articulo-en-espanol
 ---

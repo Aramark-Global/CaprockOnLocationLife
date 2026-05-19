@@ -1,10 +1,10 @@
 ---
-title: Third blog post in English
-description: Lorem markdownum Talia. Carinae equis.
-author: Code Stitch
+title: Amenities That Make a Difference
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+author: Caprock
 date: 2023-06-08T15:27:34.591Z
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Kitchen
+image: "@assets/images/sample-images/CorkScrew-BBQ-Texas.jpg"
+imageAlt: Caprock amenities and dining
 mappingKey: "post-3"
 permalink: third-post-in-english
 ---

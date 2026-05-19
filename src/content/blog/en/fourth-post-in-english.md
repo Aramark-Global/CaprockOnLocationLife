@@ -1,10 +1,10 @@
 ---
-title: Fourth blog post in English
-description: Lorem markdownum Talia. Carinae equis.
-author: Code Stitch
+title: Housing Options at Caprock
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+author: Caprock
 date: 2023-06-08T15:27:34.591Z
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Kitchen
+image: "@assets/images/sample-images/715b563bfa120add9762c7a218e9b955.jpg"
+imageAlt: Caprock housing accommodations
 mappingKey: "post-4"
 permalink: fourth-post-in-english
 ---

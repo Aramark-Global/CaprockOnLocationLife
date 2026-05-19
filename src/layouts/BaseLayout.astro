@@ -1,6 +1,5 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { Font } from "astro:assets";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations } from "@js/translationUtils";
 import Meta from "@components/Meta/Meta.astro";
@@ -26,40 +25,13 @@ const t = useTranslations(locale);
 			<slot name="schema" slot="schema" />
 		</Meta>
 
-		<!-- Astro custom Font API -->
-		<Font cssVariable="--font-primary" preload/>
-
 		<!-- View Transitions support -->
 		<ClientRouter />
 
 		<!-- Sitewide Scripts -->
 		<script src="@assets/js/nav.js"></script>
 
-		<!-- FOUC prevention: applies dark-mode class before first paint.
-		     Reads cs-theme (set by ThemeSelect or DarkModeToggle) and falls
-		     back to the legacy "theme" key used by the Intermediate kit. -->
-		<script is:inline>
-			(function () {
-				var stored = localStorage.getItem("cs-theme");
-				var isDark;
-				if (stored === "dark") {
-					isDark = true;
-				} else if (stored === "light" || stored === "") {
-					isDark = false;
-				} else {
-					// Not set or any unexpected value — fall back to legacy key, then system pref
-					var legacy = localStorage.getItem("theme");
-					if (legacy === "dark") {
-						isDark = true;
-					} else if (legacy === "light") {
-						isDark = false;
-					} else {
-						isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-					}
-				}
-				if (isDark) document.body?.classList.add("dark-mode");
-			})();
-		</script>
+
 	</head>
 	<body>
 		<!-- Screen reader skip main nav -->
@@ -73,27 +45,4 @@ const t = useTranslations(locale);
 	</body>
 </html>
 
-<!-- Re-apply theme after each View Transition page swap -->
-<script is:inline>
-	document.addEventListener("astro:after-swap", function () {
-		var stored = localStorage.getItem("cs-theme");
-		var isDark;
-		if (stored === "dark") {
-			isDark = true;
-		} else if (stored === "light" || stored === "") {
-			isDark = false;
-		} else {
-			var legacy = localStorage.getItem("theme");
-			if (legacy === "dark") {
-				isDark = true;
-			} else if (legacy === "light") {
-				isDark = false;
-			} else {
-				isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-			}
-		}
-		isDark
-			? document.body.classList.add("dark-mode")
-			: document.body.classList.remove("dark-mode");
-	});
-</script>
+

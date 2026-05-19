@@ -4,7 +4,6 @@ import { formatDate } from "@js/utils";
 import { getLocaleFromUrl, getPostSlug } from "@js/localeUtils";
 import { useTranslations, getLocalizedRoute } from "@js/translationUtils";
 
-// Receiving incoming props and destructuring them
 const { post } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -12,207 +11,131 @@ const slug = getPostSlug(post);
 const { title, date, description, image, imageAlt } = post.data;
 ---
 
-<li class="cs-item">
-    <Image src={image} alt={imageAlt} class="cs-picture" />
-    <div class="cs-flex">
-        <span class="cs-date">{formatDate(date)}</span>
-        <h3 class="cs-h3">{title}</h3>
-        <p class="cs-item-text">
-            {description}
-        </p>
-        <a href={getLocalizedRoute(locale,`/blog/${slug}`)} class="cs-link">
-            {t("blog:readMore")}
-            <img
-                class="cs-arrow"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg"
-                alt="icon"
-                width="20"
-                height="20"
-                aria-hidden="true"
-            />
-        </a>
-    </div>
+<li class="cap-post-card">
+	<a href={getLocalizedRoute(locale, `/blog/${slug}`)} class="cap-post-card-img-link" tabindex="-1" aria-hidden="true">
+		<Image src={image} alt={imageAlt} class="cap-post-card-img" widths={[480, 800]} sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 50vw, 100vw" loading="lazy" />
+	</a>
+	<div class="cap-post-card-body">
+		<span class="cap-post-card-date">{formatDate(date)}</span>
+		<h3 class="cap-post-card-title">
+			<a href={getLocalizedRoute(locale, `/blog/${slug}`)}>{title}</a>
+		</h3>
+		<p class="cap-post-card-excerpt">{description}</p>
+		<a href={getLocalizedRoute(locale, `/blog/${slug}`)} class="cap-post-card-link" aria-label={`${t("blog:readMore")}: ${title}`}>
+			{t("blog:readMore")}
+			<svg class="cap-post-card-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+				<path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</a>
+	</div>
 </li>
 
 <style lang="less">
-    /* Mobile - 360px */
-    @media only screen and (min-width: 0rem) {
-        .cs-item {
-            text-align: left;
-            list-style: none;
-            border-radius: (16/16rem);
-            overflow: hidden;
-            background-color: #f7f7f7;
-            border: 1px solid #e8e8e8;
-            grid-column: span 12;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            z-index: 1;
-            transition:
-                box-shadow 0.3s,
-                transform 0.3s;
+	.cap-post-card {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		background-color: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(207, 183, 153, 0.15);
+		overflow: hidden;
+		transition: border-color 0.3s ease, transform 0.3s ease;
 
-            &:hover {
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                .cs-picture {
-                    img {
-                        opacity: 0.3;
-                        transform: scale(1.1);
-                    }
-                }
-            }
-        }
+		&:hover {
+			border-color: rgba(207, 183, 153, 0.5);
+			transform: translateY(-3px);
 
-        .cs-picture {
-            width: 100%;
-            height: (240/16rem);
-            background-color: #1a1a1a;
-            border-bottom: 4px solid var(--primary);
-            overflow: hidden;
-            display: block;
-            /* prevents flexbox from squishing it */
-            flex: none;
-            position: relative;
-            z-index: 1;
+			.cap-post-card-img {
+				transform: scale(1.04);
+			}
+		}
+	}
 
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                transition:
-                    transform 0.6s,
-                    opacity 0.3s;
-            }
-        }
+	.cap-post-card-img-link {
+		display: block;
+		overflow: hidden;
+		aspect-ratio: 3 / 2;
+		flex: none;
+	}
 
-        .cs-flex {
-            height: 100%;
-            padding: (24/16rem);
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-            z-index: 2;
-        }
+	.cap-post-card-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.6s ease;
+	}
 
-        .cs-date {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            text-align: inherit;
-            margin: 0;
-            padding: (8/16rem) (16/16rem);
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            background-color: var(--primary);
-            border-radius: (8/16rem) (8/16rem) 0 0;
-            color: #fff;
-            display: inline-block;
-            position: absolute;
-            left: (24/16rem);
-            bottom: 100%;
-            z-index: 2;
-        }
+	.cap-post-card-body {
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		flex: 1;
+	}
 
-        .cs-h3 {
-            font-size: (20/16rem);
-            text-align: inherit;
-            line-height: 1.2em;
-            font-weight: 700;
-            color: var(--headerColor);
-            margin: 0 0 (12/16rem) 0;
-            transition: color 0.3s;
-        }
+	.cap-post-card-date {
+		font-family: var(--font-gotham);
+		font-size: 0.6875rem;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--gold);
+	}
 
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            text-align: inherit;
-            margin: 0 0 (20/16rem);
-            color: var(--bodyTextColor);
-        }
+	.cap-post-card-title {
+		font-family: var(--font-empera);
+		font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+		line-height: 1.15;
+		text-transform: uppercase;
+		color: var(--white);
+		margin: 0;
 
-        .cs-link {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            text-decoration: none;
-            margin-top: auto;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+		a {
+			color: inherit;
+			text-decoration: none;
+			transition: color 0.2s ease;
 
-            &:hover {
-                .cs-arrow {
-                    transform: translateX(0.25rem);
-                }
-            }
-        }
+			&:hover,
+			&:focus-visible {
+				color: var(--gold);
+			}
+		}
+	}
 
-        .cs-arrow {
-            width: (20/16rem);
-            height: auto;
-            transition: transform 0.3s;
-        }
-    }
+	.cap-post-card-excerpt {
+		font-family: var(--font-gotham);
+		font-size: 0.9375rem;
+		line-height: 1.6;
+		color: var(--lightGray);
+		flex: 1;
+	}
 
-    /* Tablet - 768px */
-    @media only screen and (min-width: 48rem) {
-        .cs-item {
-            grid-column: span 4;
-        }
-    }
+	.cap-post-card-link {
+		font-family: var(--font-gotham);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--gold);
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin-top: 0.5rem;
+		transition: gap 0.2s ease;
 
-    /* Dark Mode */
-    @media only screen and (min-width: 0rem) {
-        body.dark-mode {
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-link,
-            .cs-item-text {
-                color: var(--bodyTextColorWhite);
-            }
+		&:hover,
+		&:focus-visible {
+			gap: 0.75rem;
+		}
+	}
 
-            .cs-text,
-            .cs-item-text {
-                opacity: 0.8;
-            }
+	.cap-post-card-arrow {
+		flex: none;
+		transition: transform 0.2s ease;
+	}
 
-            .cs-item {
-                background-color: rgba(0, 0, 0, 0.2);
-                border-color: rgba(255, 255, 255, 0.2);
-                &:before {
-                    opacity: 0.3;
-                }
-            }
-
-            .cs-picture {
-                border-color: #fff;
-            }
-
-            .cs-date {
-                background-color: #fff;
-            }
-
-            .cs-date {
-                color: var(--primary);
-            }
-
-            .cs-arrow {
-                filter: grayscale(1) brightness(1000%);
-            }
-        }
-    }
+	.cap-post-card-link:hover .cap-post-card-arrow,
+	.cap-post-card-link:focus-visible .cap-post-card-arrow {
+		transform: translateX(3px);
+	}
 </style>

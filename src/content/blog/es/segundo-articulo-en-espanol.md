@@ -1,13 +1,13 @@
 ---
-title: Segundo artículo del blog en español
-description: Lorem markdownum trabeati dicere deus.
-author: Code Stitch
+title: Qué Esperar tu Primera Semana
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+author: Caprock
 date: 2023-06-08T15:28:08.486Z
 featured: true
 mappingKey: "post-2"
 permalink: segundo-articulo-en-espanol
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Cocina
+image: "@assets/images/sample-images/Black-s-BBQ-Austin5-80f2be9ff2720fe_80f2bf89-a173-ddba-111031c8765461a2.jpg"
+imageAlt: Comedor en el campo Caprock
 ---
 
 ## Canitiem Saxa

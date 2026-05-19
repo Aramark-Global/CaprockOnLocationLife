@@ -1,12 +1,9 @@
 ---
-import ThemeSelect from "@components/DarkMode/ThemeSelect.astro";
 import TwoLocalesSelect from "@components/LanguageSwitch/TwoLocalesSelect.astro";
-
 ---
 
 <div class="options-wrapper">
 	<TwoLocalesSelect />
-	<ThemeSelect />
 </div>
 
 <style>
@@ -17,14 +14,8 @@ import TwoLocalesSelect from "@components/LanguageSwitch/TwoLocalesSelect.astro"
 			flex-direction: column;
 			align-items: center;
 			margin-left: auto;
-			border-top: 1px solid hsl(224, 6%, 77%);
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
 			padding-block: 1em;
-		}
-
-		body.dark-mode {
-			.options-wrapper {
-				border-top: 1px solid hsl(224, 10%, 23%);
-			}
 		}
 	}
 
@@ -35,12 +26,6 @@ import TwoLocalesSelect from "@components/LanguageSwitch/TwoLocalesSelect.astro"
 			padding: 0;
 			border-top: none;
 			gap: 1.5em;
-		}
-
-		body.dark-mode {
-			.options-wrapper {
-				border-top: none;
-			}
 		}
 	}
 </style>

@@ -1,71 +1,72 @@
 {
 	"layout": {
-		"title": "Pixel Perfect Websites",
-		"description": "Meta description for the page"
+		"title": "Caprock — Discover Life at Caprock",
+		"description": "An elevated workforce community in Mobeetie, Texas, designed for comfort, connection, and life on site."
 	},
 	"hero": {
-		"topper": "Advanced Kit",
-		"title": {
-			"1": "Advanced Astro v6",
-			"2": "i18n"
-		},
-		"p1": "This kit is specially designed for customers who want a multi-language site, and is therefore configured with Astro's internationalization tools (i18n) for two languages: English and French. It also includes a Decap CMS integration.",
-		"cta1": "GitHub",
-		"cta2": "CodeStitch"
+		"eyebrow": "Mobeetie, Texas",
+		"title": "Discover Life at Caprock",
+		"subtitle": "An Elevated Workforce Community",
+		"intro": "Built for people powering progress, Caprock is designed to provide a comfortable, connected, and convenient living experience while working on site.",
+		"cta": "Contact",
+		"scroll": "Learn More"
 	},
-	"services": [
-		{
-			"heading": "Service 1",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		},
-		{
-			"heading": "Service 2",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		},
-		{
-			"heading": "Service 3",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		}
-	],
-	"about": {
-		"topper": "About Us",
-		"title": "About Company Title",
-		"p1": "Our company was created In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "We believe that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p3": "It's important In consequat tincidunt turpis sit amet imperdiet.",
-		"rank": "CEO-Founder",
-		"cta": "More about us"
+	"intro": {
+		"eyebrow": "About",
+		"title": "More than workforce housing.",
+		"p1": "Caprock is a welcoming, service-driven community designed to help residents recharge, connect, and feel supported throughout their stay.",
+		"p2": "From modern single-occupancy accommodations to energizing recreation spaces and a variety of dining options, every aspect of the community is thoughtfully designed to support your daily life, wellbeing, and sense of connection."
 	},
-	"extra": {
-		"topper": "SEO Ranking",
-		"title": "Talk about a main service keyword",
-		"p1": "Our main service In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "Research shows that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per."
-	},
-	"portfolio": {
-		"topper": "Our Portfolio",
-		"title": "Et orci volutpat, back up generator installations",
-		"cta": "View Our Products"
-	},
-	"testimonials": {
-		"topper": "Testimonials",
-		"title": "Words From Our Customers",
+	"amenities": {
+		"eyebrow": "Life on Site",
+		"title": "Designed for the whole day.",
+		"intro": "After the workday, stay active, share a meal with coworkers, or take time to reset. Every experience is built around comfort, convenience, and connection.",
 		"items": [
-			{
-				"quote": "I was amazed by the quality of work. The team was professional and exceeded my expectations. Highly recommend!",
-				"name": "John Smith",
-				"role": "Homeowner"
-			},
-			{
-				"quote": "Outstanding service from start to finish. They communicated clearly and delivered exactly what was promised.",
-				"name": "Sarah Johnson",
-				"role": "Business Owner"
-			},
-			{
-				"quote": "The level of craftsmanship was impressive. They treated my home like it was their own.",
-				"name": "Michael Brown",
-				"role": "Property Manager"
-			}
+			{ "title": "Single Occupancy Rooms", "desc": "Private, fully furnished rooms with climate control and Wi-Fi." },
+			{ "title": "Wellness Center", "desc": "Weight rooms and recovery spaces to keep you at your best." },
+			{ "title": "Sports & Recreation", "desc": "Soccer fields, pickleball, basketball, and a golf simulator." },
+			{ "title": "On-Site Dining", "desc": "Freshly prepared meals, grab-and-go, and food trucks." },
+			{ "title": "RV Park", "desc": "Full-service RV accommodations with access to every amenity." },
+			{ "title": "Shuttle & Security", "desc": "Reliable shuttle services and 24/7 guest services on site." }
 		]
+	},
+	"location": {
+		"eyebrow": "Getting Here",
+		"title": "Conveniently located in the Texas panhandle.",
+		"intro": "Caprock sits near regional cities and transportation hubs, with accessible travel options from across the country.",
+		"address": "14585 Highway 152, Mobeetie, TX 79061",
+		"cities": [
+			{ "name": "Pampa, TX", "distance": "~25 minutes" },
+			{ "name": "Sweetwater, OK", "distance": "~45 minutes" },
+			{ "name": "Amarillo, TX", "distance": "~1.5 hours" }
+		],
+		"airport": {
+			"label": "Nearest Airport",
+			"name": "Rick Husband Amarillo International",
+			"distance": "~1 hour 15 minutes"
+		}
+	},
+	"housing": {
+		"eyebrow": "Housing & Accommodations",
+		"title": "Modern spaces. Built for the long stay.",
+		"p1": "Thoughtfully designed for extended stays and workforce living, our accommodations support both rest and productivity — so residents can settle in, recharge, and feel at home.",
+		"features": [
+			"Private Single Occupancy",
+			"Fully Furnished Rooms",
+			"Wi-Fi & Climate Control",
+			"Laundry & Housekeeping",
+			"Shared Social Spaces",
+			"On-Site RV Park"
+		],
+		"cta": "Inquire About Housing"
+	},
+	"cta": {
+		"eyebrow": "Get In Touch",
+		"title": "Ready to call Caprock home?",
+		"subtitle": "Register or learn more about life on site.",
+		"button": "Contact",
+		"callLabel": "Call Us",
+		"emailLabel": "Email",
+		"visitLabel": "Visit"
 	}
 }

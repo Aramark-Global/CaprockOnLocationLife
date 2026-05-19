@@ -1,123 +1,166 @@
 ---
+import { Image } from "astro:assets";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations, getLocalizedRoute } from "@js/translationUtils";
+import { BUSINESS } from "@data/client";
+import emblem from "@assets/logos/Caprock-Emblem-Iso-white.png";
+import ctaImg from "@assets/images/sample-images/ram-rodeo-yun-wang.jpg";
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
-import CSPicture from "@components/CSPicture/CSPicture.astro";
-import ctaImage from "@assets/images/CTA/cabinets2.jpg";
-import ctaSquaresUrl from "@assets/svgs/cta-squares.svg?url";
-const ctaSquaresBg = `url("${ctaSquaresUrl}")`;
 ---
 
-<section id="cta">
-  <div class="container">
-    <h2 class="title">
-      {t("ctaComponent.title")}
-      <br />
-      {t("ctaComponent.subtitle")}
-    </h2>
-    <p>
-      {t("ctaComponent.message")}
-    </p>
-    <a href={getLocalizedRoute(locale,"/contact")} class="cs-button-solid">{t("ctaComponent.cta")}</a>
-  </div>
-  <CSPicture src={ctaImage} alt={t("ctaComponent.alt")} />
+<section class="cap-cta-new" style={`--cta-bg: url('${ctaImg.src}')`}>
+	<div class="cap-cta-overlay" aria-hidden="true"></div>
+	<div class="cap-container cap-cta-grid">
+
+		<!-- Messaging -->
+		<div class="cap-cta-messaging">
+			<Image
+				src={emblem}
+				alt=""
+				width={72}
+				height={72}
+				class="cap-cta-emblem"
+				aria-hidden="true"
+				loading="lazy"
+			/>
+			<span class="cap-eyebrow cap-cta-eyebrow">{t("home:cta.eyebrow")}</span>
+			<span class="cap-rule"></span>
+			<h2 class="cap-cta-title">{t("home:cta.title")}</h2>
+			<p class="cap-cta-sub">{t("home:cta.subtitle")}</p>
+			<div class="cap-cta-btns">
+				<a href={`mailto:${BUSINESS.email}`} class="cap-btn">{t("home:cta.button")}</a>
+				<a href={getLocalizedRoute(locale, "/about")} class="cap-btn cap-btn--ghost">{t("common:learnMore")}</a>
+			</div>
+		</div>
+
+		<!-- Contact card -->
+		<div class="cap-cta-contact">
+			<div class="cap-cta-contact-item">
+				<span class="cap-cta-contact-label">{t("home:cta.callLabel")}</span>
+				<a href={`tel:${BUSINESS.phoneForTel}`} class="cap-cta-contact-value">{BUSINESS.phoneFormatted}</a>
+			</div>
+			<div class="cap-cta-divider" aria-hidden="true"></div>
+			<div class="cap-cta-contact-item">
+				<span class="cap-cta-contact-label">{t("home:cta.emailLabel")}</span>
+				<a href={`mailto:${BUSINESS.email}`} class="cap-cta-contact-value">{BUSINESS.email}</a>
+			</div>
+			<div class="cap-cta-divider" aria-hidden="true"></div>
+			<div class="cap-cta-contact-item">
+				<span class="cap-cta-contact-label">{t("home:cta.visitLabel")}</span>
+				<a href={BUSINESS.address.mapLink} target="_blank" rel="noopener" class="cap-cta-contact-value">
+					{BUSINESS.address.lineOne}<br />
+					{BUSINESS.address.city} {BUSINESS.address.state} {BUSINESS.address.zip}
+				</a>
+			</div>
+		</div>
+
+	</div>
 </section>
 
-<!-- Don't forget to place the picture styles over into the CSPicture component -->
-<style lang="less" define:vars={{ ctaSquaresBg }}>
-  /* Mobile */
-  @media only screen and (min-width: 0em) {
-    #cta {
-      padding: (50/16rem) 0;
-      position: relative;
+<style lang="less">
+	.cap-cta-new {
+		position: relative;
+		background-image: var(--cta-bg);
+		background-size: cover;
+		background-position: center 30%;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		padding: clamp(5rem, 12vw, 9rem) 0;
 
-      &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #000;
-        opacity: 0.7;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
+		@media (max-width: 63.9375rem) {
+			background-attachment: scroll;
+		}
+	}
+	.cap-cta-overlay {
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.84);
+		z-index: 0;
+	}
+	.cap-cta-grid {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	.cap-cta-messaging {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+	.cap-cta-emblem {
+		width: 4rem;
+		height: auto;
+		opacity: 0.55;
+	}
+	.cap-cta-eyebrow {
+		color: var(--gold);
+	}
+	.cap-cta-title {
+		font-family: var(--font-empera);
+		font-size: clamp(2.75rem, 6vw, 5rem);
+		color: var(--white);
+		text-transform: uppercase;
+		line-height: 1.0;
+		max-width: 18ch;
+	}
+	.cap-cta-sub {
+		font-family: var(--font-gelica);
+		font-style: italic;
+		font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+		color: var(--lightGray);
+		max-width: 34ch;
+	}
+	.cap-cta-btns {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 0.5rem;
+	}
+	.cap-cta-contact {
+		border: 1px solid rgba(207, 183, 153, 0.35);
+		display: flex;
+		flex-direction: column;
+	}
+	.cap-cta-divider {
+		height: 1px;
+		background-color: rgba(207, 183, 153, 0.2);
+	}
+	.cap-cta-contact-item {
+		padding: 1.75rem 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.cap-cta-contact-label {
+		font-family: var(--font-gotham);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: var(--gold);
+	}
+	.cap-cta-contact-value {
+		font-family: var(--font-gotham);
+		font-size: clamp(1.125rem, 2vw, 1.5rem);
+		color: var(--white);
+		text-decoration: none;
+		line-height: 1.3;
+		transition: color 0.2s ease;
 
-      .container {
-        text-align: center;
-      }
-
-      .title {
-        font-size: ~"min(9vw, 3rem)";
-        font-weight: 900;
-        line-height: 58/48;
-        text-align: center;
-        margin-bottom: (36/16rem);
-        color: #fff;
-        position: relative;
-      }
-
-      p {
-        text-align: center;
-        width: 96%;
-        max-width: (598/16rem);
-        margin: auto;
-        margin-bottom: (36/16rem);
-        color: #fff;
-        opacity: 1;
-      }
-    }
-  }
-
-  /* Small Desktop */
-  @media only screen and (min-width: 64em) {
-    #cta {
-      padding: (168/16rem) 0;
-    }
-  }
-
-  /* Large Desktop */
-  @media only screen and (min-width: 1300px) {
-    #cta {
-      margin-top: (100/16rem);
-      position: relative;
-      &:before {
-        display: none;
-      }
-      &:after {
-        content: "";
-        width: (2000/16rem);
-        height: (1108/16rem);
-        background: var(--ctaSquaresBg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 1;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        z-index: -3;
-        transform: translateX(-50%);
-      }
-      .container {
-        width: 90.0625%;
-        margin: auto;
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #cta {
-        &:after {
-          display: none;
-        }
-      }
-    }
-  }
+		&:hover,
+		&:focus-visible {
+			color: var(--gold);
+		}
+	}
+	@media (min-width: 64rem) {
+		.cap-cta-grid {
+			grid-template-columns: 1.2fr 1fr;
+			gap: 6rem;
+		}
+	}
 </style>

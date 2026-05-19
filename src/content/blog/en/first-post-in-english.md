@@ -1,12 +1,12 @@
 ---
-title: First blog post in English
-description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
-author: Code Stitch
+title: Welcome to Life on Location
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+author: Caprock
 date: 2023-06-08T15:26:46.705Z
 mappingKey: "post-1"
 permalink: first-post-in-english
-image: "@assets/images/blog/blog-cover.jpg"
-imageAlt: Kitchen
+image: "@assets/images/sample-images/a9734527be814ac547a23819ba1ad81a.jpg"
+imageAlt: Caprock on-location community
 ---
 
 ## Acuti Modo

@@ -18,54 +18,11 @@
 		"children": []
 	},
 	{
-		"key": "projects",
-		"label": {
-			"en": "Projects",
-			"es": "Proyectos"
-		},
-		"children": [
-			{
-				"key": "project-1",
-				"url": "/projects/project-1/",
-				"label": {
-					"en": "Project 1",
-					"es": "Proyecto 1"
-				}
-			},
-			{
-				"key": "project-2",
-				"url": "/projects/project-2/",
-				"label": {
-					"en": "Project 2",
-					"es": "Proyecto 2"
-				}
-			}
-		]
-	},
-	{
 		"key": "blog",
 		"url": "/blog",
 		"label": {
 			"en": "Blog",
 			"es": "Blog"
-		},
-		"children": []
-	},
-	{
-		"key": "reviews",
-		"url": "/reviews",
-		"label": {
-			"en": "Reviews",
-			"es": "Reseñas"
-		},
-		"children": []
-	},
-	{
-		"key": "contact",
-		"url": "/contact",
-		"label": {
-			"en": "Contact",
-			"es": "Contacto"
 		},
 		"children": []
 	}
