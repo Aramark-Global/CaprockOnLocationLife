@@ -22,12 +22,10 @@
 		"title": "Diseñado para todo el día.",
 		"intro": "Después de la jornada, manténgase activo, comparta una comida con compañeros o tómese tiempo para reiniciar. Cada experiencia gira en torno a comodidad, conveniencia y conexión.",
 		"items": [
-			{ "title": "Habitaciones Individuales", "desc": "Habitaciones privadas y amuebladas con clima e Internet." },
-			{ "title": "Centro de Bienestar", "desc": "Salas de pesas y espacios de recuperación para rendir al máximo." },
-			{ "title": "Deportes y Recreación", "desc": "Fútbol, pickleball, baloncesto y simulador de golf." },
-			{ "title": "Comedor en el Lugar", "desc": "Comidas frescas, opciones para llevar y food trucks." },
-			{ "title": "Parque de RV", "desc": "Alojamiento completo para RV con acceso a todas las comodidades." },
-			{ "title": "Transporte y Seguridad", "desc": "Servicio de transporte y atención al huésped las 24 horas." }
+			{ "title": "Habitaciones Individuales", "desc": "Habitaciones privadas y amuebladas con clima e Internet. Servicio semanal de limpieza disponible para residentes." },
+			{ "title": "Comedor en el Lugar", "desc": "Comidas frescas, opciones para llevar y food trucks. Coffee Bar y Barbeque Kitchen próximamente." },
+			{ "title": "Servicios de Transporte", "desc": "Servicios de transporte confiables hacia y desde su lugar de trabajo." },
+			{ "title": "Servicios al Residente y Seguridad", "desc": "Caprock ofrece servicios al residente y seguridad en el lugar las 24 horas." }
 		]
 	},
 	"location": {
@@ -56,9 +54,19 @@
 			"Wi-Fi y Climatización",
 			"Lavandería y Limpieza",
 			"Espacios Sociales Compartidos",
-			"Parque de RV en el Lugar"
+			"Servicios de Comedor en el Lugar"
 		],
+		"comingSoonLabel": "Próximamente",
 		"cta": "Consultar Alojamiento"
+	},
+	"comingSoon": {
+		"eyebrow": "Próximamente",
+		"title": "Próximamente",
+		"items": [
+			{ "title": "Centro de Recreación y Fitness", "desc": "Campos de fútbol, pickleball, baloncesto y simulador de golf." },
+			{ "title": "Estacionamiento para RV", "desc": "Estacionamiento completo para RV con acceso a todas las comodidades." },
+			{ "title": "Tiendas de Conveniencia", "desc": "Artículos esenciales disponibles en cualquier momento, de día o de noche." }
+		]
 	},
 	"cta": {
 		"eyebrow": "Contáctenos",

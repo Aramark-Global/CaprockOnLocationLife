@@ -22,12 +22,10 @@
 		"title": "Designed for the whole day.",
 		"intro": "After the workday, stay active, share a meal with coworkers, or take time to reset. Every experience is built around comfort, convenience, and connection.",
 		"items": [
-			{ "title": "Single Occupancy Rooms", "desc": "Private, fully furnished rooms with climate control and Wi-Fi." },
-			{ "title": "Wellness Center", "desc": "Weight rooms and recovery spaces to keep you at your best." },
-			{ "title": "Sports & Recreation", "desc": "Soccer fields, pickleball, basketball, and a golf simulator." },
-			{ "title": "On-Site Dining", "desc": "Freshly prepared meals, grab-and-go, and food trucks." },
-			{ "title": "RV Park", "desc": "Full-service RV accommodations with access to every amenity." },
-			{ "title": "Shuttle & Security", "desc": "Reliable shuttle services and 24/7 guest services on site." }
+			{ "title": "Single Occupancy Rooms", "desc": "Private, fully furnished rooms with climate control and Wi-Fi. Weekly housekeeping services available to residents." },
+			{ "title": "On-Site Dining", "desc": "Freshly prepared meals, grab-and-go, and food trucks. Coffee Bar and Barbeque Kitchen coming soon." },
+			{ "title": "Transportation Services", "desc": "Reliable transportation services to and from your work site." },
+			{ "title": "Resident & Security Services", "desc": "Caprock supports 24/7 on site resident services and security." }
 		]
 	},
 	"location": {
@@ -56,9 +54,19 @@
 			"Wi-Fi & Climate Control",
 			"Laundry & Housekeeping",
 			"Shared Social Spaces",
-			"On-Site RV Park"
+			"On-Site Dining Services"
 		],
+		"comingSoonLabel": "Coming Soon",
 		"cta": "Inquire About Housing"
+	},
+	"comingSoon": {
+		"eyebrow": "Coming Soon",
+		"title": "Coming Soon",
+		"items": [
+			{ "title": "Recreation and Fitness Center", "desc": "Soccer fields, pickleball, basketball, and golf simulator." },
+			{ "title": "RV Parking", "desc": "Full-service RV parking with access to every amenity." },
+			{ "title": "Retail and Convenience Stores", "desc": "Everyday essentials available anytime, day or night." }
+		]
 	},
 	"cta": {
 		"eyebrow": "Get In Touch",

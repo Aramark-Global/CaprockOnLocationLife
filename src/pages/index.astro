@@ -5,7 +5,7 @@ import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations, getLocalizedRoute } from "@js/translationUtils";
 import BrowserLanguageRedirect from "@components/LanguageSwitch/BrowserLanguageRedirect.astro";
 
-import heroImg from "@assets/images/sample-images/pexels-alexquezada-33041456.jpg";
+import heroImg from "@assets/images/AdobeStock.jpeg";
 import housingImg from "@assets/images/sample-images/5c44868359773af0ba2f990a2d7858cf.jpg";
 import diningImg from "@assets/images/sample-images/c7c493ea99ee39aff6454dcc5196b3ff.jpg";
 import emblem from "@assets/logos/Caprock-Emblem-Iso-white.png";
@@ -18,6 +18,7 @@ const t = useTranslations(locale);
 
 const amenities = t<Array<{ title: string; desc: string }>>("home:amenities.items");
 const features = t<string[]>("home:housing.features");
+const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.items");
 ---
 
 <BrowserLanguageRedirect />
@@ -86,6 +87,27 @@ const features = t<string[]>("home:housing.features");
 					amenities.map((item, idx) => (
 						<li class="cap-amenity">
 							<span class="cap-amenity-num">{String(idx + 1).padStart(2, "0")}</span>
+							<h3 class="cap-h3">{item.title}</h3>
+							<p>{item.desc}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- ===================== COMING SOON ===================== -->
+	<section class="cap-section cap-section--light cap-coming-soon">
+		<div class="cap-container">
+			<header class="cap-section-head">
+				<span class="cap-eyebrow">{t("home:comingSoon.eyebrow")}</span>
+				<span class="cap-rule"></span>
+				<h2 class="cap-h2">{t("home:comingSoon.title")}</h2>
+			</header>
+			<ul class="cap-coming-soon-grid">
+				{
+					comingSoon.map((item) => (
+						<li class="cap-coming-soon-item">
 							<h3 class="cap-h3">{item.title}</h3>
 							<p>{item.desc}</p>
 						</li>
@@ -185,11 +207,6 @@ const features = t<string[]>("home:housing.features");
 			<!-- Contact card -->
 			<div class="cap-cta-contact">
 				<div class="cap-cta-contact-item">
-					<span class="cap-cta-contact-label">{t("home:cta.callLabel")}</span>
-					<a href={`tel:${BUSINESS.phoneForTel}`} class="cap-cta-contact-value">{BUSINESS.phoneFormatted}</a>
-				</div>
-				<div class="cap-cta-divider" aria-hidden="true"></div>
-				<div class="cap-cta-contact-item">
 					<span class="cap-cta-contact-label">{t("home:cta.emailLabel")}</span>
 					<a href={`mailto:${BUSINESS.email}`} class="cap-cta-contact-value">{BUSINESS.email}</a>
 				</div>
@@ -230,7 +247,7 @@ const features = t<string[]>("home:housing.features");
 	.cap-hero-scrim {
 		position: absolute;
 		inset: 0;
-		background-color: rgba(0, 0, 0, 0.65);
+		background-color: rgba(0, 0, 0, 0.45);
 		z-index: 1;
 	}
 	.cap-hero-content {
@@ -298,6 +315,34 @@ const features = t<string[]>("home:housing.features");
 		max-width: 38rem;
 	}
 
+	/* COMING SOON */
+	.cap-coming-soon-grid {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+
+		@media (min-width: 40rem) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: 64rem) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	.cap-coming-soon-item {
+		border-left: 2px solid var(--gold);
+		padding-left: 1.5rem;
+
+		h3 {
+			margin-bottom: 0.5rem;
+		}
+		p {
+			font-size: 0.9375rem;
+			color: var(--bodyText);
+		}
+	}
+
 	/* AMENITIES */
 	.cap-amenities-parallax {
 		position: relative;
@@ -362,7 +407,7 @@ const features = t<string[]>("home:housing.features");
 	}
 	@media (min-width: 64rem) {
 		.cap-amenities-grid {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
