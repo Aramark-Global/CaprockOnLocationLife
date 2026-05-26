@@ -32,17 +32,22 @@ const locale = getLocaleFromUrl(Astro.url);
 				<ul id="cap-nav-menu" class="cap-nav-list">
 					{
 						navData.map((entry: any) => {
-							const href = getLocalizedRoute(locale, entry.url);
+							const hashIndex = entry.url.indexOf("#");
+							const href =
+								hashIndex !== -1
+									? getLocalizedRoute(locale, entry.url.slice(0, hashIndex) || "/").replace(/\/$/, "") +
+										"#" +
+										entry.url.slice(hashIndex + 1)
+									: getLocalizedRoute(locale, entry.url);
 							const isActive =
 								entry.url === "/"
 									? Astro.url.pathname === href
-									: Astro.url.pathname.startsWith(href);
+									: Astro.url.pathname.startsWith(href.split("#")[0]);
 							return (
 								<li>
 									<a
 										href={href}
-										class:list={["cap-nav-link", { "is-active": isActive }]}
-										aria-current={isActive ? "page" : undefined}
+										class="cap-nav-link"
 									>
 										{entry.label[locale]}
 									</a>
@@ -180,8 +185,7 @@ const locale = getLocaleFromUrl(Astro.url);
 		display: inline-block;
 
 		&:hover,
-		&:focus-visible,
-		&.is-active {
+		&:focus-visible {
 			color: var(--gold);
 		}
 	}
@@ -242,12 +246,10 @@ const locale = getLocaleFromUrl(Astro.url);
 			}
 
 			&:hover::after,
-			&:focus-visible::after,
-			&.is-active::after {
+			&:focus-visible::after {
 				transform: scaleX(1);
 			}
 
-			&.is-active,
 			&:hover {
 				color: var(--gold);
 			}

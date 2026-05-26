@@ -47,8 +47,7 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 			<p class="cap-sub cap-hero-sub">{t("home:hero.subtitle")}</p>
 			<p class="cap-hero-intro">{t("home:hero.intro")}</p>
 			<div class="cap-hero-ctas">
-				<a href="mailto:info@caprockonlocation.com" class="cap-btn">{t("home:hero.cta")}</a>
-				<a href="#cap-intro" class="cap-btn cap-btn--ghost">{t("home:hero.scroll")}</a>
+				<a href="#cap-life-on-site" class="cap-btn">{t("home:hero.scroll")}</a>
 			</div>
 		</div>
 	</section>
@@ -70,6 +69,7 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 
 	<!-- ===================== AMENITIES ===================== -->
 	<section
+		id="cap-life-on-site"
 		class="cap-section cap-amenities-parallax"
 		style={`--amenities-bg: url('${ramrodeoImg.src}')`}
 	>
@@ -118,7 +118,7 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 	</section>
 
 	<!-- ===================== HOUSING (Split) ===================== -->
-	<section class="cap-section cap-section--light cap-split">
+	<section id="cap-housing" class="cap-section cap-section--light cap-split">
 		<div class="cap-container cap-split-grid">
 			<div class="cap-split-media">
 				<Picture
@@ -138,9 +138,6 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 				<ul class="cap-feature-list">
 					{features.map((feat) => <li>{feat}</li>)}
 				</ul>
-				<a href={getLocalizedRoute(locale, "/about")} class="cap-btn cap-btn--ghost">
-					{t("home:housing.cta")}
-				</a>
 			</div>
 		</div>
 	</section>
@@ -177,6 +174,7 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 
 	<!-- ===================== FINAL CTA ===================== -->
 	<section
+		id="cap-contact"
 		class="cap-cta-new"
 		style={`--cta-bg: url('${ctaImg.src}')`}
 	>
@@ -200,7 +198,6 @@ const comingSoon = t<Array<{ title: string; desc: string }>>("home:comingSoon.it
 				<p class="cap-cta-sub">{t("home:cta.subtitle")}</p>
 				<div class="cap-cta-btns">
 					<a href={`mailto:${BUSINESS.email}`} class="cap-btn">{t("home:cta.button")}</a>
-					<a href={getLocalizedRoute(locale, "/about")} class="cap-btn cap-btn--ghost">{t("common:learnMore")}</a>
 				</div>
 			</div>
 

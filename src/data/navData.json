@@ -1,16 +1,7 @@
 [
 	{
-		"key": "home",
-		"url": "/",
-		"label": {
-			"en": "Home",
-			"es": "Inicio"
-		},
-		"children": []
-	},
-	{
 		"key": "about",
-		"url": "/about",
+		"url": "/#cap-intro",
 		"label": {
 			"en": "About",
 			"es": "Sobre Nosotros"
@@ -18,11 +9,29 @@
 		"children": []
 	},
 	{
-		"key": "blog",
-		"url": "/blog",
+		"key": "life-on-site",
+		"url": "/#cap-life-on-site",
 		"label": {
-			"en": "Blog",
-			"es": "Blog"
+			"en": "Life On Site",
+			"es": "Vida en el Lugar"
+		},
+		"children": []
+	},
+	{
+		"key": "housing",
+		"url": "/#cap-housing",
+		"label": {
+			"en": "Housing",
+			"es": "Alojamiento"
+		},
+		"children": []
+	},
+	{
+		"key": "contact",
+		"url": "/#cap-contact",
+		"label": {
+			"en": "Contact",
+			"es": "Contacto"
 		},
 		"children": []
 	}

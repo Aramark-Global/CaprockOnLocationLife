@@ -9,10 +9,10 @@ export const SITE = {
 
 export const BUSINESS = {
 	name: "Caprock",
-	email: "info@caprockonlocation.com",
+	email: "Caprock-Information@aramark.com",
 	phoneForTel: "123-456-7890",
 	phoneFormatted: "(123) 456-7890",
-	logo: "/favicon.svg",
+	logo: "/assets/favicons/favicon-96x96.png?v=20260526",
 	address: {
 		lineOne: "14585 Highway 152",
 		lineTwo: "",
