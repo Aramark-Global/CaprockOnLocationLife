@@ -15,6 +15,11 @@ const locale = getLocaleFromUrl(Astro.url);
 			<Image src={logoWhite} alt="Caprock" width={480} height={120} decoding="async" loading="eager" />
 		</a>
 
+		<!-- Language selector: visible in the top bar on mobile only -->
+		<div class="cap-lang-mobile">
+			<Settings />
+		</div>
+
 		<nav class="cap-nav" aria-label="Primary">
 			<button
 				class="cap-toggle"
@@ -197,6 +202,13 @@ const locale = getLocaleFromUrl(Astro.url);
 		border-top: 1px solid rgba(255, 255, 255, 0.12);
 	}
 
+	.cap-lang-mobile {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		margin-right: 0.75rem;
+	}
+
 	/* Desktop */
 	@media only screen and (min-width: 64rem) {
 		.cap-toggle {
@@ -258,6 +270,10 @@ const locale = getLocaleFromUrl(Astro.url);
 		.cap-nav-settings {
 			padding-top: 0;
 			border: none;
+		}
+
+		.cap-lang-mobile {
+			display: none;
 		}
 	}
 

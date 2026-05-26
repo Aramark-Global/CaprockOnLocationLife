@@ -26,11 +26,20 @@ const currentYear = getCurrentYear();
 				<h2 class="cap-footer-heading">{t("footer.explore")}</h2>
 				<ul>
 					{
-						navData.map((entry: any) => (
-							<li>
-								<a href={getLocalizedRoute(locale, entry.url)}>{entry.label[locale]}</a>
-							</li>
-						))
+						navData.map((entry: any) => {
+							const hashIndex = entry.url.indexOf("#");
+							const href =
+								hashIndex !== -1
+									? getLocalizedRoute(locale, entry.url.slice(0, hashIndex) || "/").replace(/\/$/, "") +
+										"#" +
+										entry.url.slice(hashIndex + 1)
+									: getLocalizedRoute(locale, entry.url);
+							return (
+								<li>
+									<a href={href}>{entry.label[locale]}</a>
+								</li>
+							);
+						})
 					}
 				</ul>
 			</section>

@@ -16,6 +16,17 @@ document.addEventListener('astro:page-load', () => { // Make the script controll
         toggleMenu()
         ariaExpanded(mobileMenuToggle);
     });
+
+    // Close mobile menu when any nav link is clicked (e.g. anchor/hash links)
+    const navLinks = document.querySelectorAll('.cap-nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (CSnavbarMenu.classList.contains('cs-active')) {
+                toggleMenu();
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
   
     // Checks the value of aria expanded on an element and changes it accordingly whether it is expanded or not
     function ariaExpanded(element) {
