@@ -50,11 +50,14 @@
 		"p1": "Thoughtfully designed for extended stays and workforce living, our accommodations support both rest and productivity — so residents can settle in, recharge, and feel at home.",
 		"features": [
 			"Private Single Occupancy",
-			"Fully Furnished Rooms",
 			"Wi-Fi & Climate Control",
-			"Laundry & Housekeeping",
 			"Shared Social Spaces",
-			"On-Site Dining Services"
+			"Fully Furnished Rooms",
+			"On-Site Dining Services",
+			"Weekly Housekeeping Service",
+			"Self Service Laundry",
+			"Package & Mail Service",
+			"Convenience Store"
 		],
 		"comingSoonLabel": "Coming Soon",
 		"cta": "Inquire About Housing"
@@ -75,6 +78,8 @@
 		"button": "Contact For General Information",
 		"callLabel": "Call Us",
 		"emailLabel": "Email",
-		"visitLabel": "Visit"
+		"visitLabel": "Visit",
+		"careersLabel": "Work at Caprock",
+		"careersLinkText": "View Open Roles Here"
 	}
 }

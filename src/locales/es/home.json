@@ -50,11 +50,14 @@
 		"p1": "Diseñados para estancias prolongadas y la vida laboral, nuestros alojamientos apoyan tanto el descanso como la productividad — para que los residentes se instalen, descansen y se sientan en casa.",
 		"features": [
 			"Habitación Individual Privada",
-			"Habitaciones Amuebladas",
 			"Wi-Fi y Climatización",
-			"Lavandería y Limpieza",
 			"Espacios Sociales Compartidos",
-			"Servicios de Comedor en el Lugar"
+			"Habitaciones Amuebladas",
+			"Servicios de Comedor en el Lugar",
+			"Servicio Semanal de Limpieza",
+			"Lavandería de Autoservicio",
+			"Servicio de Paquetes y Correo",
+			"Tienda de Conveniencia"
 		],
 		"comingSoonLabel": "Próximamente",
 		"cta": "Consultar Alojamiento"
@@ -75,6 +78,8 @@
 		"button": "Contacto para Información General",
 		"callLabel": "Llámenos",
 		"emailLabel": "Correo",
-		"visitLabel": "Visítenos"
+		"visitLabel": "Visítenos",
+		"careersLabel": "Trabaje en Caprock",
+		"careersLinkText": "Ver Puestos Disponibles"
 	}
 }
